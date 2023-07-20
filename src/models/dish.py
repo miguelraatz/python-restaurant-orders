@@ -39,3 +39,10 @@ class Dish:
 
     def get_ingredients(self):
         return set(self.recipe.keys())
+
+
+if __name__ == "__main__":
+    dish = Dish("lasanha presunto", 25.90)
+    ingredient = Ingredient("carne")
+    dish.add_ingredient_dependency(ingredient, 5)
+    print(dish.get_restrictions())
